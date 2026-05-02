@@ -16,6 +16,9 @@ needed.
 - Do not read secrets, private keys, runtime caches, dependency folders, build output, or large dumps.
 - Do not mutate installer-owned BMAD files directly.
 - Do not commit changes without explicit user approval.
+- Do not infer or auto-discover the target code repo location from the current directory, wiki repo
+  name, sibling directories, recent context, or git remotes. The target repo path or URL must be
+  user-supplied or already present in explicit workflow context, then verified before scanning.
 - Keep raw evidence, source summaries, concepts, decisions, experiments, and logs as separate pages.
 - Mark source authority clearly: `current behavior`, `planned direction`, `generated dirty context`,
   or `external/raw context`.
@@ -51,5 +54,7 @@ The minimum successful output is:
 - updated `wiki/log.md`;
 - proposed deep scan plan.
 
-When the user says "сам розберися" or "figure it out", use conservative read-only defaults, record
-assumptions in the raw packet, and continue.
+When the user says "сам розберися" or "figure it out", use conservative read-only defaults only
+after the target repo path or URL has been explicitly provided and verified. If the target repo
+location, project identity, or minimum scan context is missing, ask for those details instead of
+guessing.

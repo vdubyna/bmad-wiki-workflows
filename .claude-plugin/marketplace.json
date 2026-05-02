@@ -18,8 +18,8 @@
     {
       "name": "bmad-wiki-code-project-init",
       "source": "./",
-      "description": "Initialize an Obsidian/LLM wiki from a code repository with raw evidence, source summaries, project profile, and deep scan plan.",
-      "version": "0.1.0",
+      "description": "Initialize an Obsidian/LLM wiki from an explicitly supplied code repository with raw evidence, source summaries, project profile, and deep scan plan.",
+      "version": "2026.05.03.0",
       "author": {
         "name": "vdubyna"
       },

@@ -1,6 +1,10 @@
 # Stage 3: Quick Scan
 
-Run a read-only quick scan of the target code repo.
+Run a read-only quick scan of the verified target code repo.
+
+Do not start this stage until Stage 1 has verified a user-supplied or explicitly saved target repo
+path/URL. If verification is missing or inconclusive, return to Stage 1 and ask for the missing
+repo location or project context.
 
 ## Read-Only Commands
 

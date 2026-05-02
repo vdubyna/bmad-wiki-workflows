@@ -46,6 +46,10 @@ In the target wiki repo:
 Run bmad-wiki-code-project-init for target repo: /path/to/code
 ```
 
+The workflow must receive an explicit target repo path or URL. It should not guess the code repo
+from the current directory, sibling folders, wiki repo name, or git remotes. If the target is
+missing, it should ask for the repo location and minimum project context before scanning.
+
 For first-run help registration:
 
 ```text

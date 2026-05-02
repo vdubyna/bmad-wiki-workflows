@@ -1,13 +1,32 @@
 # Stage 1: Intake And Scope
 
-Establish intent before scanning.
+Establish intent and verify the target code repo before scanning.
 
 ## Steps
 
 1. Check the current wiki repo status with `git status --short`.
-2. Identify the target code repo path or URL from the user message.
-3. If missing, ask for the target repo path or URL.
-4. Ask only questions that change the scan result:
+2. Identify the target code repo path or URL only from the user message or explicit saved workflow
+   context.
+3. If the target repo path or URL is missing, stop and ask for the minimum missing intake:
+   - project name or short project description;
+   - local repo path or remote URL for analysis;
+   - whether read-only commands may run in that repo;
+   - branch/tag/commit if a specific source of truth is required;
+   - scan purpose and must-include/must-exclude items if known.
+4. Do not infer or auto-discover the target repo location from the current directory, wiki repo name,
+   sibling folders, recent context, git remotes, package names, or common project layouts.
+5. Run a target repo verification gate before any scan:
+   - For a local path, expand exactly the supplied path, verify it exists and is readable, then
+     determine whether it is a Git repo.
+   - For a Git repo, capture branch, commit, remotes, and worktree status with read-only commands.
+   - For a non-Git directory, record that fact and verify a filesystem inventory can run.
+   - For a remote URL, verify that the URL was explicitly supplied. Do not clone or fetch it unless
+     the user asked for that or approves it; otherwise ask for a local checkout path.
+   - If the supplied target appears to be the wiki repo itself, ask for confirmation unless the user
+     explicitly requested self-documentation.
+   - If canonical docs, manifests, configs, source folders, or tests are not visible, ask for the
+     missing project description/scope instead of inventing it.
+6. Ask only additional questions that change the scan result:
    - Which branch/tag/commit is the source of truth?
    - Should dirty changes be included, ignored, or only inventoried?
    - What is the wiki purpose: onboarding, architecture, search/retrieval, benchmark, audit,
@@ -16,12 +35,14 @@ Establish intent before scanning.
    - Which folders/files/data are must-exclude?
    - Which stack/languages are expected?
    - What first output matters most?
-5. If the user says to proceed autonomously, infer conservative read-only answers.
-6. Record assumptions for the raw packet.
+7. If the user says to proceed autonomously, infer conservative read-only answers for scan options
+   only after the target repo location and identity have passed verification.
+8. Record assumptions and verification results for the raw packet.
 
 ## Default Decisions
 
 - Scan mode: `quick`.
+- Target repo: no default. Require a user-supplied or explicitly saved path/URL.
 - Dirty changes: `ignore` unless explicitly requested.
 - Include: docs, manifests, configs, source/test inventory.
 - Exclude: secrets, dependencies, caches, build output, binaries, dumps.
@@ -32,6 +53,8 @@ Establish intent before scanning.
 You can state:
 
 - target repo;
+- target repo source: user-supplied path/URL or explicit saved workflow context;
+- target repo verification result;
 - wiki repo;
 - scan purpose;
 - include/exclude assumptions;
