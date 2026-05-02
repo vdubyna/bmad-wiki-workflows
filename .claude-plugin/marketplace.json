@@ -1,30 +1,36 @@
 {
-  "name": "bmad-wiki-code-project-init",
+  "name": "bmad-wiki-workflows",
   "owner": {
     "name": "vdubyna"
   },
   "license": "MIT",
-  "homepage": "https://github.com/vdubyna/bmad-wiki-code-project-init",
-  "repository": "https://github.com/vdubyna/bmad-wiki-code-project-init",
+  "homepage": "https://github.com/vdubyna/bmad-wiki-workflows",
+  "repository": "https://github.com/vdubyna/bmad-wiki-workflows",
   "keywords": [
     "bmad",
     "wiki",
     "obsidian",
     "codebase",
     "documentation",
+    "source-registration",
+    "maintenance",
     "llm-wiki"
   ],
   "plugins": [
     {
-      "name": "bmad-wiki-code-project-init",
+      "name": "bmad-wiki-workflows",
       "source": "./",
-      "description": "Initialize an Obsidian/LLM wiki from an explicitly supplied code repository with raw evidence, source summaries, project profile, and deep scan plan.",
-      "version": "2026.05.03.0",
+      "description": "Evidence-first BMAD workflows for initializing and maintaining Obsidian/LLM wikis across code, docs, source registration, and maintenance.",
+      "version": "2026.05.03.1",
       "author": {
         "name": "vdubyna"
       },
       "skills": [
-        "./skills/bmad-wiki-code-project-init"
+        "./skills/bmad-wiki-setup",
+        "./skills/bmad-wiki-code-project-init",
+        "./skills/bmad-wiki-project-init",
+        "./skills/bmad-wiki-source-registration",
+        "./skills/bmad-wiki-maintenance"
       ]
     }
   ]

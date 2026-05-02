@@ -1,0 +1,9 @@
+# Optional per-skill customization surface.
+# Users can copy overrides into {project-root}/_bmad/custom/bmad-wiki-source-registration.toml.
+
+[workflow]
+
+persistent_facts = []
+activation_steps_prepend = []
+activation_steps_append = []
+on_complete = ""

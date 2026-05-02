@@ -1,0 +1,9 @@
+code: wiki
+name: "Wiki Workflows"
+description: "Evidence-first BMAD workflows for initializing and maintaining Obsidian/LLM wikis across code, docs, source registration, and maintenance."
+module_version: 2026.05.03.1
+default_selected: false
+module_greeting: >
+  Wiki Workflows is ready. Choose bmad-wiki-code-project-init for code repositories,
+  bmad-wiki-project-init for docs-oriented projects, bmad-wiki-source-registration for source
+  intake, or bmad-wiki-maintenance for recurring source discovery and registration.

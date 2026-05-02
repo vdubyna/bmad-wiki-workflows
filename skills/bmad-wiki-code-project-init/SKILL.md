@@ -23,15 +23,6 @@ needed.
 - Mark source authority clearly: `current behavior`, `planned direction`, `generated dirty context`,
   or `external/raw context`.
 
-## Setup And Help Registration
-
-If the user invokes this skill with `setup`, `configure`, `registration`, or asks to register it with
-BMAD help, read and follow `assets/module-setup.md`, then stop unless they also asked to run the
-workflow.
-
-If setup cannot run because `_bmad/` is not present, continue with the workflow and mention that help
-registration was skipped.
-
 ## Workflow
 
 1. Read and follow `prompts/01-intake-and-scope.md`.

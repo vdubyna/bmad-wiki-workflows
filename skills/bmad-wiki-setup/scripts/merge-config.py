@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""No-op config merge for the standalone Wiki Workflows module.
+"""Check module config for the Wiki Workflows setup skill.
 
-The first version has no required install-time configuration. The script exists
-so the standalone module follows the BMAD self-registration shape and can grow a
-real config merge later without changing setup instructions.
+The module intentionally ships without shared configuration variables for now.
+This script keeps the multi-skill setup surface stable and can grow a real
+config merge later without changing setup instructions.
 """
 
 from __future__ import annotations

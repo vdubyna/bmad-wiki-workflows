@@ -1,8 +1,9 @@
 code: wiki
 name: "Wiki Workflows"
-description: "Evidence-first BMAD workflows for initializing and maintaining Obsidian/LLM codebase wikis."
-module_version: 2026.05.03.0
+description: "Evidence-first BMAD workflows for initializing and maintaining Obsidian/LLM wikis across code, docs, source registration, and maintenance."
+module_version: 2026.05.03.1
 default_selected: false
 module_greeting: >
-  Wiki Workflows is ready. Run bmad-wiki-code-project-init with an explicit target code repository
-  path or URL to create raw evidence, source summaries, a project profile, and a deep scan plan.
+  Wiki Workflows is ready. Run bmad-wiki-setup to register help entries, then choose
+  bmad-wiki-code-project-init, bmad-wiki-project-init, bmad-wiki-source-registration, or
+  bmad-wiki-maintenance for the wiki task at hand.

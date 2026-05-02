@@ -1,2 +1,0 @@
-module,skill,display-name,menu-code,description,action,args,phase,after,before,required,output-location,outputs
-Wiki Workflows,bmad-wiki-code-project-init,Wiki Code Project Init,WCI,"Initialize an Obsidian/LLM wiki from an explicitly supplied code repository with raw evidence, source summary, project profile, and deep scan plan.",,"[required target repo path or URL]",anytime,,,false,,"raw packet; source summary; project profile; deep scan plan"
