@@ -1,0 +1,14 @@
+# Optional per-skill customization surface.
+# Users can copy overrides into {project-root}/_bmad/custom/bmad-wiki-code-project-init.toml.
+
+[workflow]
+
+# Persistent facts are appended to the workflow context by BMAD customization resolvers.
+persistent_facts = []
+
+# Optional activation steps for teams that need project-specific setup.
+activation_steps_prepend = []
+activation_steps_append = []
+
+# Optional final instruction after review summary.
+on_complete = ""

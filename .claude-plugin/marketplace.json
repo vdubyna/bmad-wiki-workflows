@@ -1,0 +1,31 @@
+{
+  "name": "bmad-wiki-code-project-init",
+  "owner": {
+    "name": "vdubyna"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/vdubyna/bmad-wiki-code-project-init",
+  "repository": "https://github.com/vdubyna/bmad-wiki-code-project-init",
+  "keywords": [
+    "bmad",
+    "wiki",
+    "obsidian",
+    "codebase",
+    "documentation",
+    "llm-wiki"
+  ],
+  "plugins": [
+    {
+      "name": "bmad-wiki-code-project-init",
+      "source": "./",
+      "description": "Initialize an Obsidian/LLM wiki from a code repository with raw evidence, source summaries, project profile, and deep scan plan.",
+      "version": "0.1.0",
+      "author": {
+        "name": "vdubyna"
+      },
+      "skills": [
+        "./skills/bmad-wiki-code-project-init"
+      ]
+    }
+  ]
+}
