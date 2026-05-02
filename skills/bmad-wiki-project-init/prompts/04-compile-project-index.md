@@ -10,6 +10,8 @@ Create:
 raw/project/YYYY-MM-DD-<project-slug>-docs-project-intake.md
 ```
 
+Use `resources/raw-project-intake-template.md`.
+
 Include:
 
 - project identity;
@@ -29,6 +31,8 @@ Create:
 wiki/sources/YYYY-MM-DD-<project-slug>-foundational-docs.md
 ```
 
+Use `resources/source-summary-template.md`.
+
 Summarize the first canonical source bundle and list follow-up source candidates.
 
 ## Project Profile
@@ -38,6 +42,8 @@ Create or update:
 ```text
 wiki/concepts/<project-slug>-project-profile.md
 ```
+
+Use `resources/project-profile-template.md`.
 
 Keep status as `draft` unless the user explicitly approves.
 

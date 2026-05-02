@@ -10,6 +10,8 @@ Create when candidates were found:
 raw/inbox/YYYY-MM-DD-maintenance-source-candidates.md
 ```
 
+Use `resources/maintenance-source-candidates-template.md`.
+
 Include:
 
 - scan roots;

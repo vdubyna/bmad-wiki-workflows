@@ -29,6 +29,8 @@ inventory first, register only clear candidates, and ask before broad or externa
 4. Read and follow `prompts/04-triage-and-register.md`.
 5. Read and follow `prompts/05-maintenance-report.md`.
 
+Use the templates in `resources/` when creating maintenance candidate records.
+
 ## Output Contract
 
 The minimum successful output is:

@@ -10,6 +10,8 @@ Create:
 raw/inbox/YYYY-MM-DD-<source-slug>-source-registration.md
 ```
 
+Use `resources/raw-source-registration-template.md`.
+
 Include:
 
 - source identity;
@@ -29,6 +31,8 @@ Create or update:
 ```text
 wiki/sources/YYYY-MM-DD-<source-slug>.md
 ```
+
+Use `resources/source-summary-template.md`.
 
 Include:
 

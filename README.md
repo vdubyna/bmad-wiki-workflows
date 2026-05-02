@@ -85,10 +85,13 @@ skills/bmad-wiki-code-project-init/prompts/
 skills/bmad-wiki-code-project-init/resources/
 skills/bmad-wiki-project-init/SKILL.md
 skills/bmad-wiki-project-init/prompts/
+skills/bmad-wiki-project-init/resources/
 skills/bmad-wiki-source-registration/SKILL.md
 skills/bmad-wiki-source-registration/prompts/
+skills/bmad-wiki-source-registration/resources/
 skills/bmad-wiki-maintenance/SKILL.md
 skills/bmad-wiki-maintenance/prompts/
+skills/bmad-wiki-maintenance/resources/
 ```
 
 ## Release Checklist

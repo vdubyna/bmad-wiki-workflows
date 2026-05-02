@@ -44,6 +44,8 @@ Use this starter taxonomy and refine it later as the module grows:
 4. Read and follow `prompts/04-write-registration.md`.
 5. Read and follow `prompts/05-review-and-handoff.md`.
 
+Use the templates in `resources/` when creating raw source records or source summaries.
+
 ## Output Contract
 
 The minimum successful output is:

@@ -30,6 +30,10 @@ docs/
 - Do not overwrite existing files without explicit confirmation.
 - If `wiki/schema.md`, `wiki/index.md`, or `wiki/log.md` already exist, read them and adapt.
 - Create missing directories with `.gitkeep`.
+- When creating first wiki infrastructure files, start from:
+  - `resources/wiki-schema-template.md`;
+  - `resources/wiki-index-template.md`;
+  - `resources/wiki-log-template.md`.
 - Add `.obsidian/`, runtime caches, and editor noise to `.gitignore` when appropriate.
 - Never edit `raw/` files after creation. Add a new raw file for corrections.
 

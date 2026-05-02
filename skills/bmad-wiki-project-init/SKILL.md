@@ -29,6 +29,8 @@ source of truth.
 4. Read and follow `prompts/04-compile-project-index.md`.
 5. Read and follow `prompts/05-review-and-source-backlog.md`.
 
+Use the templates in `resources/` when creating missing wiki infrastructure or first wiki pages.
+
 ## Output Contract
 
 The minimum successful output is:
