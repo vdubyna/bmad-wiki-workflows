@@ -21,6 +21,8 @@ summary, and update index/log surfaces.
 - Do not treat generated notes, transcripts, or AI output as canonical without a lower-authority
   marker.
 - Do not register a source if ownership, permission, or privacy boundaries are unclear.
+- For code-derived sources, preserve the evidence chain from source summary to raw packet to target
+  repo commit/path/symbol/line range when available.
 
 ## Source Types
 

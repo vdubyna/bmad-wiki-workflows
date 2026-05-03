@@ -10,6 +10,16 @@ Use these as starter presets when the user does not provide precise scope.
 - Tests: `tests/**`, `test/**`, `spec/**`, `__tests__/**`.
 - Architecture artifacts: `docs/architecture/**`, `adr/**`, `decisions/**`.
 
+## Minimal Codebase Scope
+
+Use this when the user asks for a conservative code wiki baseline and does not provide a custom
+scope:
+
+- Dirs: `src/**`, `tests/**`, `docs/**`.
+- Exclusions: `.git/**`, `vendor/**`, `node_modules/**`.
+- Capture only metadata, summaries, bounded excerpts, command output, and benchmark output in
+  `raw/`; keep source code in the target repo.
+
 ## PHP/Symfony
 
 - Dirs: `src/**`, `config/**`, `templates/**`, `tests/**`, `migrations/**`.

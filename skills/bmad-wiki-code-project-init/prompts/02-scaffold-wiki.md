@@ -12,6 +12,7 @@ raw/
   assets/
 
 wiki/
+  targets/
   concepts/
   sources/
   experiments/
@@ -42,6 +43,7 @@ docs/
 The wiki has enough structure to store:
 
 - raw packet;
+- target registration;
 - source summary;
 - project profile;
 - index/log updates.

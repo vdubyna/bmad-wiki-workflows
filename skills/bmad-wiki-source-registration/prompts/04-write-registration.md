@@ -20,6 +20,7 @@ Include:
 - authority layer;
 - status;
 - inspection method;
+- target repo commit/path/symbol/line range for code-derived sources when available;
 - privacy exclusions;
 - evidence summary;
 - unresolved questions.
@@ -40,6 +41,7 @@ Include:
 - what it is authoritative for;
 - what it should not be used for;
 - key claims or facts;
+- evidence chain for each code-derived claim when available;
 - links to related concepts, decisions, experiments, or project profiles;
 - raw record link.
 

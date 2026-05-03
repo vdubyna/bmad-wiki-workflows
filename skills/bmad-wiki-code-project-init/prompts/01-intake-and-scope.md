@@ -1,6 +1,6 @@
-# Stage 1: Intake And Scope
+# Stage 1: Intake, Scope, And Target Registration
 
-Establish intent and verify the target code repo before scanning.
+Establish intent, verify the target code repo, and prepare a target registration before scanning.
 
 ## Steps
 
@@ -26,7 +26,20 @@ Establish intent and verify the target code repo before scanning.
      explicitly requested self-documentation.
    - If canonical docs, manifests, configs, source folders, or tests are not visible, ask for the
      missing project description/scope instead of inventing it.
-6. Ask only additional questions that change the scan result:
+6. Derive a stable `target_id` from explicit user input or the verified repository name. Keep it
+   short, lowercase, and filesystem-safe, for example `codeman`.
+7. Prepare a target registration contract before scan/ingest. It must include:
+   - `target_id`;
+   - `repo_path` or explicitly supplied remote URL;
+   - `remote`;
+   - `branch`;
+   - `commit`;
+   - `worktree_state`: `clean`, `dirty`, `non-git`, or `unknown`;
+   - `scan_scope`;
+   - `exclusions`;
+   - dirty-change handling;
+   - last scan status, if an existing `wiki/targets/<target_id>.md` is present.
+8. Ask only additional questions that change the scan result:
    - Which branch/tag/commit is the source of truth?
    - Should dirty changes be included, ignored, or only inventoried?
    - What is the wiki purpose: onboarding, architecture, search/retrieval, benchmark, audit,
@@ -35,9 +48,9 @@ Establish intent and verify the target code repo before scanning.
    - Which folders/files/data are must-exclude?
    - Which stack/languages are expected?
    - What first output matters most?
-7. If the user says to proceed autonomously, infer conservative read-only answers for scan options
+9. If the user says to proceed autonomously, infer conservative read-only answers for scan options
    only after the target repo location and identity have passed verification.
-8. Record assumptions and verification results for the raw packet.
+10. Record assumptions and verification results for the target registration and raw packet.
 
 ## Default Decisions
 
@@ -55,6 +68,7 @@ You can state:
 - target repo;
 - target repo source: user-supplied path/URL or explicit saved workflow context;
 - target repo verification result;
+- target registration contract;
 - wiki repo;
 - scan purpose;
 - include/exclude assumptions;

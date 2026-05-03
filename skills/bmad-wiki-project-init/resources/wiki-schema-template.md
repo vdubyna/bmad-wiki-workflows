@@ -52,5 +52,8 @@ updated: YYYY-MM-DD
 - Keep raw source capture and intake in `raw/`.
 - Keep compiled wiki pages in `wiki/`.
 - Use `[[wikilinks]]` between related pages.
-- Mark authority: canonical project docs, working notes, external/raw context, or generated context.
+- Mark authority: canonical project docs, working notes, external/raw context, generated context,
+  compiled synthesis, or human-reviewed decision.
+- Wiki pages are compiled synthesis, not source of truth.
+- Decision records are valid only after human review.
 - Do not mix source summary, concept note, decision record, and experiment note in one file.

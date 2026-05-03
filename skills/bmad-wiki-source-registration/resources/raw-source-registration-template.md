@@ -4,6 +4,8 @@ status: captured
 topic:
 source_type:
 authority:
+target_id:
+verified_commit:
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 ---
@@ -37,6 +39,15 @@ updated: YYYY-MM-DD
 - Last checked:
 - Size or scope:
 - Version, commit, or modified date:
+
+## Evidence Trace
+
+- Target registry:
+- Raw packet or source record:
+- Repo commit:
+- Source path:
+- Symbol or section:
+- Line range, if inspected:
 
 ## Privacy And Safety Boundaries
 

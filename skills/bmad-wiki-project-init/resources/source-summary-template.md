@@ -21,6 +21,8 @@ updated: YYYY-MM-DD
 - Working notes:
 - External/raw context:
 - Generated context:
+- Compiled synthesis:
+- Human-reviewed decisions:
 
 ## Key Facts
 

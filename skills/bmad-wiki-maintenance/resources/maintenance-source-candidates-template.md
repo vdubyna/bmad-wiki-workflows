@@ -15,6 +15,12 @@ updated: YYYY-MM-DD
 
 ## Scan Roots
 
+## Registered Targets Checked
+
+| Target ID | Repo Path | Last Scanned Commit | Current Commit | Worktree State | Action |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
+
 ## Exclusions
 
 ## Known Source Baseline
@@ -25,9 +31,23 @@ updated: YYYY-MM-DD
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
 
+## Changed Files Since Last Target Scan
+
+| Target ID | File | Change Type | Dependent Wiki Pages | Recommended Action |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+## Stale Page Candidates
+
+| Wiki Page | Target ID | Verified Commit | Changed Evidence | Recommended Status |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
 ## Triage Decisions
 
 ## Registrations Completed
+
+## Refresh Tasks Proposed
 
 ## Deferred Work
 

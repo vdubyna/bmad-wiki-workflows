@@ -5,8 +5,9 @@ description: Maintain wiki source registrations. Use when the user wants to scan
 
 # BMAD Wiki Maintenance
 
-Goal: keep an evidence-first Obsidian/LLM wiki current by finding new or changed sources and routing
-them into source registration.
+Goal: keep an evidence-first Obsidian/LLM wiki current by finding new or changed sources, checking
+registered target repositories for stale code-derived pages, and routing refresh work into source
+registration or code-project scan workflows.
 
 This workflow is maintenance-oriented. It scans bounded locations, compares candidates against
 existing source summaries/log entries, and prepares registration work. It should stay conservative:
@@ -20,6 +21,8 @@ inventory first, register only clear candidates, and ask before broad or externa
   binary archives.
 - Do not rewrite raw evidence.
 - Do not mark stale sources as superseded or archived without human approval.
+- Do not rewrite code-derived wiki pages automatically during target refresh. Propose refresh tasks
+  first.
 
 ## Workflow
 
@@ -36,8 +39,10 @@ Use the templates in `resources/` when creating maintenance candidate records.
 The minimum successful output is:
 
 - maintenance candidate record in `raw/inbox/YYYY-MM-DD-maintenance-source-candidates.md`;
+- target refresh/stale candidate record when registered targets were checked;
 - updated `wiki/log.md`;
 - source-registration handoff list;
+- target refresh task list for stale code-derived pages;
 - source summaries created or updated only for clearly approved candidates.
 
 If scan roots or maintenance purpose are missing, ask for them before scanning.

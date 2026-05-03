@@ -9,9 +9,11 @@ context needed to verify the scan target.
 
 ## Minimum Useful Intake
 
+- Target ID:
 - Project name:
 - Short project description:
 - Local repo path or remote URL:
+- Remote URL:
 - Can read-only commands run in the target repo?
 - Branch/tag/commit to document:
 - Dirty changes: `ignore`, `include`, or `unknown`:
@@ -25,6 +27,7 @@ context needed to verify the scan target.
 
 - Scan mode: quick scan.
 - Target repo: no default; requires a user-supplied or explicitly saved path/URL.
+- Target registration: required before scan/ingest.
 - Dirty changes: ignore unless explicitly included.
 - Include: README/docs/manifests/config/source/tests inventory.
 - Exclude: secrets, dependencies, caches, build output, binaries, dumps.
@@ -37,4 +40,6 @@ context needed to verify the scan target.
 - Branch/commit/remotes/status captured when Git is available:
 - Confirmed target is not the wiki repo unless self-documentation was requested:
 - Visible evidence found: docs, manifests, configs, source folders, tests:
+- Target registration path:
+- Last scanned commit, if already registered:
 - Missing information to ask the user:

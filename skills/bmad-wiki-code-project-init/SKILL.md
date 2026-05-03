@@ -5,7 +5,8 @@ description: Initialize a code repository wiki from source evidence. Use when th
 
 # BMAD Wiki Code Project Init
 
-Goal: initialize or update an evidence-first Obsidian/LLM wiki for a target code repository.
+Goal: initialize or update an evidence-first Obsidian/LLM wiki for a registered target code
+repository.
 
 This is a complex workflow. Keep this file as the routing layer and load stage prompts only when
 needed.
@@ -19,9 +20,16 @@ needed.
 - Do not infer or auto-discover the target code repo location from the current directory, wiki repo
   name, sibling directories, recent context, or git remotes. The target repo path or URL must be
   user-supplied or already present in explicit workflow context, then verified before scanning.
-- Keep raw evidence, source summaries, concepts, decisions, experiments, and logs as separate pages.
-- Mark source authority clearly: `current behavior`, `planned direction`, `generated dirty context`,
-  or `external/raw context`.
+- Keep target registrations, raw evidence, source summaries, concepts, decisions, experiments, and
+  logs as separate pages.
+- Mark source authority clearly:
+  - code/tests/manifests: `current behavior`;
+  - official docs/README: `canonical project docs`;
+  - AI research/deep research: `generated context`;
+  - wiki pages: `compiled synthesis`, not a source of truth;
+  - decisions: valid only after human review.
+- Do not copy the target codebase into `raw/`. Store scan packets, summaries, metadata, bounded
+  excerpts, command output, and benchmark output only.
 
 ## Workflow
 
@@ -34,12 +42,17 @@ needed.
 Use `resources/scan-scope-presets.md` when inferring scan scope. Use the templates in `resources/`
 when creating missing wiki infrastructure or first wiki pages.
 
+When the wiki purpose includes retrieval, coding assistance, or evaluation, use
+`resources/benchmark-report-template.md` to create or propose a benchmark-aware wiki surface for
+Recall@K, MRR, NDCG, citation precision, patch success, stale lag, latency, and cost.
+
 ## Output Contract
 
 The minimum successful output is:
 
-- raw init packet in `raw/project/YYYY-MM-DD-<project-slug>-repo-initial-scan.md`;
-- source summary in `wiki/sources/YYYY-MM-DD-<project-slug>-repo-initial-scan.md`;
+- target registration in `wiki/targets/<target-id>.md`;
+- raw snapshot packet in `raw/project/YYYY-MM-DD-<target-id>-snapshot-<shortsha>-scan.md`;
+- source summary in `wiki/sources/YYYY-MM-DD-<target-id>-snapshot-<shortsha>-scan.md`;
 - project profile in `wiki/concepts/<project-slug>-project-profile.md`;
 - updated `wiki/index.md`;
 - updated `wiki/log.md`;

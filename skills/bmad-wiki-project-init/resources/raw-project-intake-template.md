@@ -45,6 +45,8 @@ scope:
     working_notes: []
     external_raw_context: []
     generated_context: []
+    compiled_synthesis: []
+    human_reviewed_decisions: []
   assumptions: []
   unresolved_questions: []
 ```

@@ -20,8 +20,8 @@
     {
       "name": "bmad-wiki-workflows",
       "source": "./",
-      "description": "Evidence-first BMAD workflows for initializing and maintaining Obsidian/LLM wikis across code, docs, source registration, and maintenance.",
-      "version": "2026.05.03.1",
+      "description": "Evidence-first BMAD workflows for initializing and maintaining Obsidian/LLM wikis with target registries, snapshot provenance, source registration, and stale refresh loops.",
+      "version": "2026.05.03.2",
       "author": {
         "name": "vdubyna"
       },

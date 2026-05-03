@@ -4,14 +4,17 @@ BMAD custom workflow module for initializing and maintaining evidence-first Obsi
 
 The module currently contains these workflows:
 
-- `bmad-wiki-code-project-init`: initialize a wiki from an explicitly supplied code repository;
+- `bmad-wiki-code-project-init`: initialize a wiki from an explicitly supplied and registered code
+  repository;
 - `bmad-wiki-project-init`: initialize a general docs-oriented project wiki;
 - `bmad-wiki-source-registration`: register sources of different types in the wiki;
-- `bmad-wiki-maintenance`: scan for new or changed sources and register them through the wiki flow;
+- `bmad-wiki-maintenance`: scan for new or changed sources, check registered target repos for stale
+  code-derived pages, and register or queue refresh work through the wiki flow;
 - `bmad-wiki-setup`: register the multi-skill module with BMAD help/config surfaces.
 
 The workflows create or update:
 
+- `wiki/targets/*` registered target repositories;
 - `raw/project/*` raw evidence packets;
 - `raw/inbox/*` captured source-registration and maintenance evidence;
 - `wiki/sources/*` source summaries;
@@ -22,6 +25,43 @@ The workflows create or update:
 
 It is designed for evidence-first wiki maintenance: code, tests, canonical docs, planning artifacts,
 generated artifacts, and external research are kept in separate authority layers.
+
+## Code Wiki Contract
+
+Codebase wiki workflows use three core controls:
+
+- Target registry: every code scan starts from an explicit `wiki/targets/<target-id>.md` record with
+  repo path/remote/branch/commit, worktree state, scan scope, and exclusions.
+- Snapshot provenance: every scan creates a raw packet such as
+  `raw/project/YYYY-MM-DD-codeman-snapshot-<shortsha>-scan.md` with commands used, inspected files,
+  skipped files, findings, and unresolved questions.
+- Stale refresh loop: maintenance compares each registered target's last scanned commit with the
+  current commit, maps changed files back to source summaries/wiki pages, and proposes refresh work
+  before rewriting pages.
+
+Authority layers are explicit:
+
+- code/tests/manifests = current behavior;
+- official docs/README = canonical project docs;
+- AI research/deep research = generated context;
+- wiki pages = compiled synthesis, not source of truth;
+- decisions = valid only after human review.
+
+Code-derived claims should trace through:
+
+```text
+claim -> source summary -> raw scan packet -> repo commit + file path + symbol/line range
+```
+
+For coding questions, use retrieval-first behavior: navigate from `wiki/index.md`, read source
+summaries for context, verify against the registered target repo code, then answer with clear
+labels for fact, inference, and hypothesis.
+
+The wiki repo should not copy whole codebases into `raw/`. Store scan packets, summaries, metadata,
+bounded excerpts, and benchmark outputs; keep source code in the external target repo.
+
+Benchmark-aware wiki pages may track Recall@K, MRR, NDCG, citation precision, patch success, stale
+lag, latency, and cost when the project needs retrieval or coding-agent evaluation.
 
 ## Install From Local Path
 
@@ -62,6 +102,7 @@ Run bmad-wiki-code-project-init for target repo: /path/to/code
 Run bmad-wiki-project-init for project docs: /path/to/docs
 Run bmad-wiki-source-registration for source: /path/or/url
 Run bmad-wiki-maintenance for inbox/source scan
+Run bmad-wiki-maintenance for registered target repo refresh
 ```
 
 The code project workflow must receive an explicit target repo path or URL. It should not guess the

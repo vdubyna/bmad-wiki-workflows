@@ -19,7 +19,7 @@ source of truth.
 - Do not infer a source location from sibling folders, git remotes, or project names.
 - Keep raw evidence, source summaries, concepts, decisions, experiments, and logs as separate pages.
 - Mark source authority clearly: `canonical project docs`, `working notes`, `external/raw context`,
-  or `generated context`.
+  `generated context`, `compiled synthesis`, or `human-reviewed decision`.
 
 ## Workflow
 
